@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 const Formulario = ({guardarBusquedaLetra}) => {
 
     const [busqueda, guardarBusqueda] = useState({
@@ -12,7 +13,7 @@ const Formulario = ({guardarBusquedaLetra}) => {
     const actualizarState = e => {
         guardarBusqueda({
             ...busqueda, 
-            [e.target.name] : e.target.value,
+            [e.target.name] : e.target.value
         })
     }
 
@@ -48,7 +49,7 @@ const Formulario = ({guardarBusquedaLetra}) => {
                                         name='artista'
                                         placeholder="Nombre Artista"
                                         value={artista}
-                                        onChange={e=> actualizarState}
+                                        onChange={actualizarState}
                                          />
                                     </div>
                                 </div>
@@ -61,7 +62,7 @@ const Formulario = ({guardarBusquedaLetra}) => {
                                         name='cancion'
                                         placeholder="Nombre Canción"
                                         value={cancion}
-                                        onChange={e=> actualizarState}
+                                        onChange={actualizarState}
                                          />
                                     </div>
                                 </div>
